@@ -1,0 +1,28 @@
+@charset "utf-8";
+// ======== header color
+  $color_button: linear-gradient(90deg, #1fe892, #02c0a1);
+  $hover_link_main_btn: linear-gradient(150deg, #17a3fa 0%, #2bbec9 40%, #3fdb96 75%);
+
+// ======== key color
+  $color_primary: #555555;
+
+// ======== text color
+  $color_text: #1b1b1b;
+  $color_text_inverse: #ffffff;
+  $color_link: #444444;
+  $color_link_hover: $color_link;
+
+
+
+  $color_white: #ffffff;
+  $color_black: #000000;
+  $color_red: #ff0000;
+
+
+// ======== text title color
+  $color_title: #222222;
+  $color_title_sub: #444444;
+
+
+// ======== color border
+  $border-project: 1px solid #d1d1d1;

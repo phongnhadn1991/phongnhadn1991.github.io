@@ -1,0 +1,206 @@
+header {
+  background: url(../images/bg-header.png) repeat-y center;
+  background-size: contain;
+  padding:5px 0;
+  position: relative;
+  &:after {
+    @include before_after(block,100%,5px);
+    background: #fff;
+    position:absolute;
+    bottom:-5px;
+    left:0;
+    right:0;
+    box-shadow:0 2px 5px rgba(0,0,0,0.1);
+  }
+  .mcn-menu {
+    margin-top: 5px;
+    text-align: center;
+    ul.menu {
+      li {
+        float: left;
+        text-transform: initial;
+        padding: 0px;
+        position: relative;
+        z-index: 100;
+        &:last-child {
+        margin: 0;
+        }
+        a {
+          display: block;
+          @include fontsize(14);
+          font-weight:bold;
+          color: $color_white;
+          padding: 15px 0px;
+          position: relative;
+          -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+          -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+          overflow: hidden;
+          i {
+            margin-left: 6px;
+            transition: all 300ms linear;
+            -o-transition: all 300ms linear;
+            -ms-transition: all 300ms linear;
+            -moz-transition: all 300ms linear;
+            -webkit-transition: all 300ms linear;
+          }
+        }
+        &:hover a {
+          i {
+            transform: rotate(180deg);
+          }
+        }
+        ul {
+          width: 205px;
+          position: absolute;
+          background: rgba(0, 0, 0, 0.7);
+          opacity: 0;
+          visibility: hidden;
+          transition: all 300ms linear;
+          -o-transition: all 300ms linear;
+          -ms-transition: all 300ms linear;
+          -moz-transition: all 300ms linear;
+          -webkit-transition: all 300ms linear;
+          z-index: 90;
+          left: 0px;
+          top: 75px;
+          text-align: left;
+        }
+        &:hover > ul {
+          display: block;
+          opacity: 1;
+          visibility: visible;
+          top: 65px;
+          left: 0;
+        }
+        ul {
+          &:before {
+            content: '';
+            display: block;
+            width: 100%;
+            border-top: 30px solid transparent;
+            position: absolute;
+            left: 0;
+            top: -30px;
+          }
+          li {
+            float: none;
+            padding: 0;
+            a {
+              @include fontsize(13);
+              line-height: 20px;
+              text-transform: initial;
+              padding: 12px 15px;
+              color: $color_white;
+              background: rgba(0, 0, 0, 0.5);
+              border-bottom: 1px dashed rgba(255, 255, 255, 0.5);
+            }
+            &:last-child a {
+              border-bottom: 0;
+            }
+          }
+        }
+        li {
+          a:before {
+            display: none;
+          }
+          &:hover a {
+            background: $hover_link_main_btn;
+            color: $color_white;
+          }
+        }
+        &.s-right {
+
+        }
+      }
+      & > li {
+        margin-right: 59px;
+      }
+    }
+  }
+}
+
+
+/*===================================================================*/
+
+.mm-menu {
+  background: #000;
+}
+
+.mm-listview > li > {
+  a, span {
+    font: 400 14px/20px 'Open Sans', sans-serif;
+    color: #fff;
+    text-transform: uppercase;
+  }
+}
+
+.mm-menu .mm-navbar {
+  a, > * {
+    font: 700 18px/20px 'Open Sans', sans-serif;
+    color: #fff;
+    text-transform: uppercase;
+  }
+}
+
+.mm-navbar {
+  border-color: #270f00;
+}
+
+.mm-listview > li {
+  border-color: #270f00;
+  .mm-next {
+    border-color: #270f00;
+    &:before {
+      border-color: #270f00;
+    }
+  }
+  &:after {
+    border-color: #270f00;
+  }
+  &:not(.mm-divider):after {
+    border-color: #270f00;
+    left: 0;
+    z-index: 3;
+  }
+}
+
+.mm-menu {
+  .mm-btn {
+    &:after, &:before {
+      border-color: #fff;
+    }
+  }
+  .mm-listview > li {
+    .mm-arrow:after, .mm-next:after {
+      border-color: #fff;
+    }
+    &.mm-selected > {
+      a {
+        background: #f96a0e;
+        border-radius: 0;
+        color: #fff;
+        &:not(.mm-next) {
+          background: #f96a0e;
+          border-radius: 0;
+          color: #fff;
+        }
+      }
+      span {
+        background: #f96a0e;
+        border-radius: 0;
+        color: #fff;
+      }
+    }
+    a:not(.mm-next) {
+      -webkit-tap-highlight-color: #f96a0e;
+      tap-highlight-color: #f96a0e;
+      color: #fff;
+    }
+  }
+}
+
+#mm-1 ul.mm-listview > li > a {
+  text-transform: initial;
+}

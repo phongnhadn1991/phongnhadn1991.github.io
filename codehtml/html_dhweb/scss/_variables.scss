@@ -1,0 +1,36 @@
+@function setvw($target) {
+	$vw: (768 * 0.01) * 1px;
+	@return ($target / $vw) * 1vw;
+}
+
+@function setvw1024($target) {
+	$vw: (1024 * 0.01) * 1px;
+	@return ($target / $vw) * 1vw;
+}
+
+
+
+@mixin fontsize($size, $base: 16) {
+  font-size: $size + px;
+  font-size: ($size / $base) * 1rem;
+}
+
+@mixin before_after($block-block-inline,$width,$height) {
+	content: '';
+	display: $block-block-inline;
+	width: $width;
+	height: $height;
+}
+
+@mixin transition($sec, $easing: linear) {
+  -webkit-transition: $sec $easing;
+  transition: $sec $easing;
+}
+
+%effect_shine {
+	a {position: relative; display: block; overflow: hidden;}
+	a::before { position: absolute; top: 0; left: -90%; z-index: 2; display: block; content: ''; width: 50%; height: 100%; background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%); background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%); -webkit-transform: skewX(-25deg); transform: skewX(-25deg);}
+	a:hover::before { -webkit-animation: shine 1.5s; animation: shine 1.5s;}
+	@-webkit-keyframes shine {100% {left: 125%;} }
+	@keyframes shine {100% {left: 125%;} }
+}
