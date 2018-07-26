@@ -13,7 +13,7 @@
  * @site https://jonsuh.com/hamburgers
  * @link https://github.com/jonsuh/hamburgers
  */
-@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,500,700");
 .hamburger {
   padding: 15px 15px;
   display: inline-block;
