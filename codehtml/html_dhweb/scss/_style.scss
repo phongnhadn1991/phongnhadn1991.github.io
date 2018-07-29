@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,500,700');
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
+// @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
 @font-face {
   font-family: 'Lobster';
   src: url('../fonts/Lobster/Lobster.eot');
@@ -57,7 +56,7 @@ a {
 
 
 
-// STYLE
+// STYLE HOME PAGE
 
 
 
@@ -70,6 +69,7 @@ a.btn-view-more {
   font-weight:500;
   display: inline-block;
   padding:10px 0 12px 0;
+  text-align:center;
   border-radius:4px;
   width: 250px;
   @include transition(0.2s);
@@ -380,7 +380,7 @@ section {
       margin: 0 auto;
       .wrap-detail {
         padding-top: 100px;
-        padding-bottom: 15px;
+        padding-bottom: 25px;
         .detail {
           position: relative;
           text-align:center;
@@ -481,7 +481,6 @@ section {
 
 // FOOTER
 footer {
-  padding-top: 15px;
   .footer-top {
     height: 100px;
     background: url(../images/bg-footer.png) repeat-y top center;
@@ -602,6 +601,151 @@ footer {
     }
   }
 }
+
+
+
+// ABOUT PAGE
+.block-banner-about {
+  padding: 5.5% 0;
+  background: url(../images/bg-banner-about.png) bottom no-repeat;
+  background-size: cover;
+  .mcn-title {
+    h2 {
+      text-transform: none;
+      @include fontsize(35);
+      color: $color_white;
+    }
+    p {
+      color: $color_white;
+    }
+  }
+}
+
+.block-intro-about {
+  padding-bottom: 0;
+  .col {
+    padding: 0;
+  }
+  .top_intro {
+    padding:25px 0;
+    h3 {
+      @include fontsize(20);
+      color: $color_primary;
+      margin-bottom: 18px;
+    }
+    p {
+      margin-bottom: 30px;
+    }
+  }
+  .bottom_intro {
+    .bg_text {
+      background: #1c91f8;
+    }
+    ._img {
+      img {
+        width: 100%;
+      }
+    }
+    ._text {
+      color: $color_white;
+      padding:30px 30px 30px 30px;
+      h4 {
+        @include fontsize(25);
+        font-weight:500;
+        margin-bottom: 16px;
+        text-transform: uppercase;
+      }
+      p {
+        width: 92%;
+        &:not(:last-child) {
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+}
+.block-why-about {
+  .mcn-title {
+    h2 {
+      padding-bottom: 10px;
+    }
+  }
+  ._text {
+    p {
+      padding-top: 100px;
+    }
+  }
+}
+
+.block-product-about {
+  padding:3% 0;
+  background: #f8f7f7;
+  ._text {
+    p {
+      margin-bottom: 25px;
+    }
+  }
+}
+
+.block-number-about {
+  padding:3% 0;
+  .detail {
+    ._img {
+      margin-bottom: 10px;
+    }
+    ._text {
+      padding:0 11%;
+      span {
+        text-transform: uppercase;
+        font-weight: 600;
+        display:block;
+        margin-bottom: 5px;
+      }
+    }
+  }
+}
+
+.block-hotline-about {
+  background: url(../images/bg-hotline-about.jpg) bottom no-repeat;
+  background-size: cover;
+  padding:3% 0;
+  .mcn-title {
+    h2 {
+      color: $color_white;
+      span {
+        padding-top: 15px;
+        @include fontsize(30);
+        color: $color_white;
+        display: block;
+      }
+    }
+    p {
+      color: $color_white;
+      @include fontsize(15);
+      width: 90%;
+    }
+  }
+  .detail {
+    padding-left:100px;
+    ._img {
+      float:left;
+    }
+    ._text {
+      float:left;
+      padding-left:20px;
+      color: $color_white;
+      span {
+        display: block;
+        text-transform: uppercase;
+        font-weight:500;
+      }
+      strong {
+        @include fontsize(18);
+      }
+    }
+  }
+}
+
 
 @-moz-document url-prefix() {}
 
